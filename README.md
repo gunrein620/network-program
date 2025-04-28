@@ -1,6 +1,6 @@
 # network-program
 
-실습 1-1 실행순서
+### 1-1 실행순서 #####################
 
 tar -xvzf unpv13e.tar.gz // 압축푸는거
 [1]cd unpv13e // 작업디렉토리 이동
@@ -15,3 +15,25 @@ tar -xvzf unpv13e.tar.gz // 압축푸는거
   sudo ./p11_srv
 [8] 새 터미널창 열고 확인하기 
   ./p11_cli 127.0.0.1
+
+
+#### 1-2 실습 ########################
+
+[1] 복사파일 만들기 
+cp daytimetcpcli.c p12_cli.c
+cp daytimetcpsrv.c p12_srv.c
+
+[2] #include "unp.h" 지우기.
+- unp.h의 #include문 + macro정의에서
+    - 최착의 `#endif` 반드시 제외하고
+    - 모두 복사 붙인다.
+
+[3] 컴파일
+gcc -o p12_cli -I../lib p12_cli.c ../libunp.a
+gcc -o p12_srv -I../lib p12_srv.c ../libunp.a
+
+[4] 서버실행
+sudo ./p12_srv
+
+[5] 클라이언트 실행
+./p12_cli 127.0.0.1

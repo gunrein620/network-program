@@ -30,12 +30,14 @@ Kernel configured for up to 14 processors.
 Processor type: arm64e (ARM64E)
 Processors active: 0 1 2 3 4 5 6 7 8 9 10 11 12 13
 Primary memory available: 24.00 gigabytes
-Default processor set: 847 tasks, 4595 threads, 14 processors
-Load average: 7.83, Mach factor: 10.69
+Default processor set: 863 tasks, 4655 threads, 14 processors
+Load average: 3.43, Mach factor: 10.55
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /opt/anaconda3/bin
+PATH: /opt/anaconda3/condabin
 PATH: /Users/kunwoopark/.pyenv/shims
 PATH: /Users/kunwoopark/.pyenv/bin
 PATH: /opt/homebrew/bin
@@ -49,9 +51,6 @@ PATH: /sbin
 PATH: /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin
 PATH: /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin
 PATH: /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
-PATH: /opt/anaconda3/bin
-PATH: /opt/anaconda3/condabin
-PATH: /Users/kunwoopark/.pyenv/bin
 PATH: /Users/kunwoopark/Applications/iTerm.app/Contents/Resources/utilities
 
 
@@ -138,7 +137,7 @@ configure: failed program was:
 |   choke me
 | #endif
 configure:2225: checking for ranlib
-configure:2241: found /usr/bin/ranlib
+configure:2241: found /opt/anaconda3/bin/ranlib
 configure:2252: result: ranlib
 configure:2267: checking for pthread_create in -lpthread
 configure:2298: gcc -o conftest -g -O2   conftest.c -lpthread   >&5
@@ -1418,8 +1417,8 @@ configure:6327: checking for gethostbyname_r
 configure:6377: gcc -o conftest -g -O2 -D_REENTRANT   conftest.c -lresolv -lpthread  >&5
 Undefined symbols for architecture arm64:
   "_gethostbyname_r", referenced from:
-      _main in conftest-7e445a.o
-      _f in conftest-7e445a.o
+      _main in conftest-69d63d.o
+      _f in conftest-69d63d.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:6380: $? = 1
@@ -2087,6 +2086,7 @@ on KUNui-MacBookPro.local
 config.status:628: creating Makefile
 config.status:628: creating Make.defines
 config.status:731: creating config.h
+config.status:992: config.h is unchanged
 
 ## ---------------- ##
 ## Cache variables. ##
